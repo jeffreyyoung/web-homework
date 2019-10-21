@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./bin/app",
+    "seed": "node ./seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "graphql": "^14.3.1",
     "http-errors": "^1.7.2",
     "mongoose": "^5.5.15",
+    "mongoose-faker": "^1.0.0",
     "pino": "^5.12.6",
     "pino-http": "^4.2.0",
     "pino-pretty": "^3.1.0",
@@ -28,6 +30,7 @@
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
     "eslint-config-divvy": "1.1.0",
+    "faker": "^4.1.0",
     "prettier": "1.18.2"
   },
   "engines": {

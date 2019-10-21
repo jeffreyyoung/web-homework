@@ -1,3 +1,6 @@
 {
-    "extends": "divvy"
+    "extends": "divvy",
+    "rules": {
+        "indent": "off"
+    }
 }

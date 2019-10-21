@@ -9,21 +9,18 @@ const {
 
 const TransactionType = require('./transaction-type')
 const Resolvers = require('./../query-resolvers/resolvers')
-
-const UserType = new GraphQLObjectType({
-  name: 'User',
+const MerchantType = new GraphQLObjectType({
+  name: 'Mercahnt',
   fields: () => ({
     id: { type: GraphQLString },
-    dob: { type: GraphQLString },
-    firstName: { type: GraphQLString },
-    lastName: { type: GraphQLString },
+    name: { type: GraphQLString },
     transactions: {
       type: new GraphQLList(TransactionType.TransactionType),
-      resolve (parentValue, args) {
-        return Resolvers.findTransactions({ user_id: parentValue.id })
+      resolve (parentValue) {
+          return Resolvers.findTransactions({ merchant_id: parentValue.id })
       }
     }
   })
 })
 
-module.exports = { UserType }
+module.exports.MerchantType = MerchantType
